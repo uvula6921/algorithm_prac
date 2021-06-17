@@ -13,7 +13,6 @@ def get_melon_best_album(genre_array, play_array):
       sum_dict[genre_array[i]] += play_array[i]
       music_dict[genre_array[i]].append([i, play_array[i]])
     
-    
   sum_dict = sorted(sum_dict, key= lambda x : sum_dict[x], reverse=True)
   for i in sum_dict:
     music_dict[i] = sorted(music_dict[i], key=lambda x:x[1], reverse=True)
@@ -25,4 +24,4 @@ def get_melon_best_album(genre_array, play_array):
     
   return result
 
-print(get_melon_best_album(genres, plays))  # 결과로 [4, 1, 3, 0] 가 와야 합니다!
+print(get_melon_best_album(genres, plays))
